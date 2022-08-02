@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "pre-commit basic usage"
+authors: itxx00
 description: "描述"
 categories: [shell]
 tags: [bash, ]

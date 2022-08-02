@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['en','zh-Hans'],
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -57,10 +57,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '老司机',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: '老司机',
+          src: 'https://github.com/itxx00.png',
         },
         items: [
           {
@@ -80,15 +80,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/notes/intro',
-              },
-            ],
-          },
           {
             title: 'More',
             items: [

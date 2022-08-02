@@ -791,8 +791,7 @@ POST整合模块
 meterpreter> run post/windows/gather/hashdump
 ```
 
-其他还有很多，使用TAB键补全看下就知道run post/<TAB>
-
+其他还有很多，使用TAB键补全看下就知道
 
 ### 5、升级command shell
 

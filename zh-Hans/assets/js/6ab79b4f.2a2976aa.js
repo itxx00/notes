@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[5961],{8900:s=>{s.exports=JSON.parse('{"label":"thinkpad","permalink":"/notes/zh-Hans/blog/tags/thinkpad","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

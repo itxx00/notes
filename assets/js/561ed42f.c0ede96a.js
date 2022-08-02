@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[579],{6576:e=>{e.exports=JSON.parse('{"label":"ovirt","permalink":"/notes/blog/tags/ovirt","allTagsPath":"/notes/blog/tags","count":1}')}}]);

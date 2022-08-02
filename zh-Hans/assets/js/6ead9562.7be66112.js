@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8503],{8529:s=>{s.exports=JSON.parse('{"label":"rpm","permalink":"/notes/zh-Hans/blog/tags/rpm","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

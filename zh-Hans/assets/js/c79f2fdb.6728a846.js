@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9190],{3933:s=>{s.exports=JSON.parse('{"label":"hitory logging","permalink":"/notes/zh-Hans/blog/tags/hitory-logging","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

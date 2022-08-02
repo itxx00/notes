@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6418],{7746:s=>{s.exports=JSON.parse('{"label":"systemd","permalink":"/notes/zh-Hans/blog/tags/systemd","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

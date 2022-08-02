@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[187],{4535:s=>{s.exports=JSON.parse('{"label":"fpm2","permalink":"/notes/zh-Hans/blog/tags/fpm-2","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

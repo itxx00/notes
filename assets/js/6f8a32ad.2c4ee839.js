@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8837],{7876:e=>{e.exports=JSON.parse('{"label":"storage pool","permalink":"/notes/blog/tags/storage-pool","allTagsPath":"/notes/blog/tags","count":1}')}}]);

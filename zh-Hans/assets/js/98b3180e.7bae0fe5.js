@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2917],{4983:s=>{s.exports=JSON.parse('{"label":"strapdown.js","permalink":"/notes/zh-Hans/blog/tags/strapdown-js","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

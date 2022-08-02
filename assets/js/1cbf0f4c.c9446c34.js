@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[5130],{3249:e=>{e.exports=JSON.parse('{"label":"hive","permalink":"/notes/blog/tags/hive","allTagsPath":"/notes/blog/tags","count":1}')}}]);

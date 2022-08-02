@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4347],{6893:e=>{e.exports=JSON.parse('{"label":"openvpn","permalink":"/notes/zh-Hans/blog/tags/openvpn","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

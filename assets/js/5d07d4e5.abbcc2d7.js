@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4805],{3662:e=>{e.exports=JSON.parse('{"label":"wireless","permalink":"/notes/blog/tags/wireless","allTagsPath":"/notes/blog/tags","count":1}')}}]);

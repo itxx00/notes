@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6513],{6333:e=>{e.exports=JSON.parse('{"label":"changelog","permalink":"/notes/zh-Hans/blog/tags/changelog","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

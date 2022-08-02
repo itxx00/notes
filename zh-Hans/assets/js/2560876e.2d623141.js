@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9753],{9087:s=>{s.exports=JSON.parse('{"label":"nftables","permalink":"/notes/zh-Hans/blog/tags/nftables","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

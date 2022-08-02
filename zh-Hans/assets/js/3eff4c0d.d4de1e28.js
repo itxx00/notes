@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1345],{3023:s=>{s.exports=JSON.parse('{"label":"wireless","permalink":"/notes/zh-Hans/blog/tags/wireless","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

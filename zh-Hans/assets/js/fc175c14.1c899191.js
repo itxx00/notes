@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9611],{6196:s=>{s.exports=JSON.parse('{"label":"coding_style","permalink":"/notes/zh-Hans/blog/tags/coding-style","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

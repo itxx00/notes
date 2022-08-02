@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7727],{5368:e=>{e.exports=JSON.parse('{"label":"conventional-changelog","permalink":"/notes/zh-Hans/blog/tags/conventional-changelog","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7416],{9361:s=>{s.exports=JSON.parse('{"label":"bandwidth","permalink":"/notes/zh-Hans/blog/tags/bandwidth","allTagsPath":"/notes/zh-Hans/blog/tags","count":1}')}}]);

@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "银行麒麟v10 aarch64机器构建percona-xtrabackup-80 rpm包"
+title: "银河麒麟v10 aarch64机器构建percona-xtrabackup-80 rpm包"
 description: "如何自己构建aarch64 xtrabackup rpm"
 categories: [shell]
 tags: [bash, ]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 1 环境准备
 ```

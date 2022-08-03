@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "标题"
+title: "使用cobbler批量安装centos系统"
 description: "描述"
 categories: [shell]
 tags: [bash, ]

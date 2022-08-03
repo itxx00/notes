@@ -8,17 +8,15 @@ tags: [bash, ]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
-
-install
+## install
 
 ```
 pip install pre-commit
 
 ```
 
-init
+## init
+
 ```
 git clone https://xxx/xxx.git
 cd xxx
@@ -27,14 +25,15 @@ pre-commit install
 pre-commit sample-config >.pre-commit-config.yaml
 ```
 
-test
+## test
+
 ```
 pre-commit run --all-files
 pre-commit run --files xxx.py
 
 ```
 
-sample conf
+## sample conf
 
 ```
 

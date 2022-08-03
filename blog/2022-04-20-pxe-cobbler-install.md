@@ -295,11 +295,15 @@ if grep -q '^UseDNS' /etc/ssh/sshd_config; then
 else
   sed -i 's/^#UseDNS .*/UseDNS no/' /etc/ssh/sshd_config
 fi
- ```
+```
 
 
 接下来还需要修改内核引导参数，完成网卡名字的变更及IPv6禁用：
-
+```
+sed -i -e 's|^GRUB_CMDLINE_LINUX=\"|GRUB_CMDLINE_LINUX=\"net.ifnames=0 biosdevname=0 |g' /etc/default/grub
+sed -i -e 's|^GRUB_CMDLINE_LINUX=\"|GRUB_CMDLINE_LINUX=\"ipv6.disable=1 |g' /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg
+```
 
 
 通过这几部分的组合，即可生成一个完整可用的ks文件，下面我将介绍如何通过虚拟机来测试安装。

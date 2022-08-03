@@ -260,15 +260,15 @@ part / --fstype=xfs --size=100000 --ondisk=sda --asprimary
 part /data --fstype=xfs --grow --ondisk=sda
 EOF
 fi
-``` 
+```
 
  第二个post_install_custom_sys作用是在系统安装最后阶段对一些必要的配置进行更改，其中运行的是shell脚本，内容如下：
 
 ```
 # cat snippets/post_install_custom_sys
-if ! grep -q 'tbds_customize' /etc/sysctl.conf; then
+if ! grep -q 'custom_sysctl' /etc/sysctl.conf; then
   cat >>/etc/sysctl.conf<<EOF
-## tbds_customize
+## custom_sysctl
 fs.file-max = 262144
 net.core.somaxconn = 10240
 vm.swappiness = 0
@@ -304,5 +304,5 @@ fi
 
 通过这几部分的组合，即可生成一个完整可用的ks文件，下面我将介绍如何通过虚拟机来测试安装。
 
-### 使用虚拟机测试PXE：
+### 使用虚拟机测试PXE
 安装虚拟化相关软件包，使用kvm虚拟机，同时安装图形界面虚拟机管理工具virt-manager方便安装操作。网络选择使用bridge模式,点击新建虚拟机，在安装选项中选择PXE,注意内存设置必须大于1G，否则PXE引导进入系统后很可能报错。

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "浅析snapshots, blockcommit,blockpull"
+title: "浅析qcow2镜像文件的快照合并"
 description: "show how to create snapshot with libvirt and qemu-img."
 categories: [virt]
 tags: [libvirt, kvm, snapshot]
@@ -141,7 +141,7 @@ VM状态（VM state）:
 
 Libvirt使用 'migrate' (to file)命令来完成VM状态转储.
 
-## 创建snapshots
+## 创建快照
 
 每次产生一个外置snapshot，一个 /new/ overlay 镜像就会随之生成，而前一个镜像就变成了一个快照.
 

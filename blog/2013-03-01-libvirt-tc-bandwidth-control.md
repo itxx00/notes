@@ -19,18 +19,20 @@ linux系统当中对网络带宽的控制一般都是使用tc命令实现，tc�
 ## cbq队列示例
 比如下面就是使用cbq队列限制src ip为192.168.1.102发送数据包的速率:
 
-### 1.建立cbq队列:
+### 1.建立cbq队列
 ```
 tc qdisc add dev eth0 root handle 1: cbq avpkt 1000 bandwidth 100mbit
 ```
-### 2.建立带宽限制分类:
+### 2.建立带宽限制分类
 ```
 tc class add dev eth0 parent 1: classid 1:1 cbq rate 60mbit allot 1500 prio 5 bounded isolated
 tc class add dev eth0 parent 1: classid 1:2 cbq rate 70mbit allot 1500 prio 5 bounded isolated
 tc class add dev eth0 parent 1: classid 1:3 cbq rate 80mbit allot 1500 prio 5 bounded isolated
 ```
 
-### 3.建立过滤器，绑定指定带宽限制类型至指定虚拟机ip:
+### 3.建立过滤器
+
+绑定指定带宽限制类型至指定虚拟机ip:
 ```
 tc filter add dev eth0 parent 1: protocol ip prio 16 u32 match ip src 192.168.1.102 flowid 1:2
 ```

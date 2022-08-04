@@ -22,7 +22,9 @@ Bash堪称*nix世界使用最广泛的shell，其特性之一是历史命令(his
 
 因为所有用户都是使用bash作为默认shell，你开始着手修改bash的配置文件：
 
-### 第1步：使bash历史记录文件和相关文件无法被删除或修改。
+### 第1步
+
+使bash历史记录文件和相关文件无法被删除或修改。
 
 小明所做的第一件事应该是建立history到/dev/null的链接。
 
@@ -61,7 +63,9 @@ bob$ ln -s /dev/null ~/.bash_history
 
 做了以上属性的修改后再来做更进一步的”加固”，一个所谓的保护措施。
 
-### 第2步：配置 .bash*配置文件
+### 第2步
+
+配置 .bash*配置文件
 
 所有的配置将针对.bashrc文件，因为其他三个配置文件本身会调用.bashrc，也就是说.bashrc无论如何都会被读取 (不管用户是否刚登录或是登录后手工调用bash shell)。
 
@@ -91,7 +95,9 @@ readonly HISTCONTROL
 readonly HISTIGNORE
 ~~~
 
-### 第3步：禁掉系统中所有其他shell，一般包括csh,tcsh,ksh。
+### 第3步
+
+禁掉系统中所有其他shell，一般包括csh,tcsh,ksh。
 
 ~~~
 # chmod 750 csh
@@ -189,7 +195,8 @@ Bash 只是一个shell，并不是一个logging设备，而bash_history只是用
 现在已经有Linux包括FreeBSD下的审计框架可供选择。在FreeBSD平台，由Robert Watson和TrustedBSD项目开发的审计框架是选择之一。在linux平台，由来自红帽的Steve Grubb开发的Linux Auditing System也是一个选择：http://people.redhat.com/sgrubb/audit/
 
 ## 六：参考资料
-* a. bash & syslog man pages
 
-* b. bash-3.2 source code -http://ftp.gnu.org/gnu/bash/bash-3.2.tar.gz
+* [1] bash & syslog man pages
+
+* [2] bash-3.2 source code -http://ftp.gnu.org/gnu/bash/bash-3.2.tar.gz
 

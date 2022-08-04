@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Ovirt中的stateless实现机制"
+title: "Ovirt中的stateless实现机制分析"
 description: "简单分析ovirt的stateless实现机制"
 categories: [virt, system]
 tags: [ovirt, stateless]
 ---
 
-> 我发现ovirt的node也就是运行虚拟机的主机被设计成了这样：整个根文件系统是只读的，只有部分配置文件被独立出来放到了另外的分区，问了几位IBM和红帽的工程师，才知道这叫stateless，也就是是无状态模式
+> 我发现ovirt的node也就是运行虚拟机的主机被设计成了这样：整个根文件系统是只读的，只有部分配置文件被独立出来放到了另外的分区，问了几位IBM和红帽的工程师，明白了为什么需要这种stateless也就是无状态的设计
 
 * Kramdown table of contents
 {:toc .toc}
@@ -18,9 +18,10 @@ tags: [ovirt, stateless]
 
 ovirt是一套虚拟化管理的系统，其对标产品是vmware的vsphere，它分为ovirt-engine和ovirt-node，可以用ovirt的这套系统来管理虚拟机群，现在虚拟化相关产品众多，微软，vmware，oracle等都在做这方面的产品，于是IBM红帽ubuntu等厂商就联合起来开始搞这个东西了，红帽很早就开始投入kvm了，红帽做的是RHEV的整套系统，也分为node和engine只是名字不一样，后来干脆就把node的RHEV-H给贡献出来，大家一起搞ovirt了。前几天我也试用了一下ovirt和RHEV，发现他们的node也就是运行虚拟机的主机被设计成了这样: 整个根文件系统是只读的，只有部分配置文件被独立出来放到了另外的分区，问了几位IBM和红帽的工程师，才知道这叫stateless，无状态，这么做的好处是运行环境和存储分离，提高整体可用性。在分析了ovirt中的stateless实现机制之后，下面将在centos6上尝试手工配置，过程中请教了几位ovirt的开发,再次表示感谢
 
-##  关于stateless
+## 关于stateless
 这种stateless的设计来自很早之前红帽在fedora里面做的尝试，目的是把系统做成liveCD，下面是一些关于stateless的描述：
 
+```
 read-only root file system(stateless linux)
 Readonly root support.
 This was add to Fedora for Stateless Linux, i.e. for creating live Fedora CDs.
@@ -68,6 +69,7 @@ problems such as breaking the df command.
 You can change your read-only root filesystem to read-write mode
 immediately with this command run by the root user:
 `mount -n -o remount,rw /`
+```
 
 ## 分析其实现机制
 
@@ -152,7 +154,7 @@ diff rc.sysinit /etc/rc.sysinit
 顺藤摸瓜我们发现和/etc/sysconfig/readonly-root这个文件有关，从文件名上即可得知和只读的关联：
 
 /etc/sysconfig/readonly-root
-~~~
+~~~bash
 Set to 'yes' to mount the system filesystems read-only.
 READONLY=yes
 # Set to 'yes' to mount various temporary state as either tmpfs

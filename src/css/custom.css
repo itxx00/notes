@@ -5,6 +5,14 @@
  */
 
 /* You can override the default Infima variables here. */
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../static/fonts/ubuntu-c-webfont.eot');
+  src: url('../../static/fonts/ubuntu-c-webfont.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/ubuntu-c-webfont.woff') format('woff'), url('../../static/fonts/ubuntu-c-webfont.ttf') format('truetype'), url('../../static/fonts/ubuntu-c-webfont.svg#ubuntu_condensedregular') format('svg');
+}
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;

@@ -9,8 +9,8 @@
   font-family: 'Ubuntu Condensed';
   font-weight: normal;
   font-style: normal;
-  src: url('../../static/fonts/ubuntu-c-webfont.eot');
-  src: url('../../static/fonts/ubuntu-c-webfont.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/ubuntu-c-webfont.woff') format('woff'), url('../../static/fonts/ubuntu-c-webfont.ttf') format('truetype'), url('../../static/fonts/ubuntu-c-webfont.svg#ubuntu_condensedregular') format('svg');
+  src: url('../fonts/ubuntu-c-webfont.eot');
+  src: url('../fonts/ubuntu-c-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-c-webfont.woff') format('woff'), url('../fonts/ubuntu-c-webfont.ttf') format('truetype'), url('../fonts/ubuntu-c-webfont.svg#ubuntu_condensedregular') format('svg');
 }
 
 :root {

@@ -9,7 +9,7 @@ sidebar_position: 6
 
 ## 下一步
 
-- 第二阶段内容 [shell编程进阶篇](/shell-next).
-- 第三阶段内容 [shell编程技巧篇](/shell-next-2)
-- 推荐内容 [shell编码规范](/shell-standards)
-- 补充阅读 [shell编码番外篇](/shell-extras)
+- 第二阶段内容 [shell编程进阶篇](https://xxx/shell-next)
+- 第三阶段内容 [shell编程技巧篇](https://xxx/shell-next-2)
+- 推荐内容 [shell编码规范](https://xxx/shell-standards)
+- 补充阅读 [shell编码番外篇](../shell-extras/01-index.md)

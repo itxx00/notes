@@ -20,7 +20,7 @@ sidebar_position: 1
 
 工欲善其事必先利其器，这里分享我所使用的基础环境以及使用方法、视频等。
 
-1 我的 tmux 配置 [我的tmux配置](docs/my-tmux)
+1 我的 tmux 配置 [我的tmux配置](https://docs/my-tmux)
 
 2 tmux使用教程 [教程](https://xxxxx/)
 

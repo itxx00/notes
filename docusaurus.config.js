@@ -94,7 +94,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} itxx00. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 老司机. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

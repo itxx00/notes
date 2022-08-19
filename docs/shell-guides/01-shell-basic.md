@@ -9,9 +9,24 @@ sidebar_position: 1
 
 ## 创建第一个脚本文件
 
+```bash
+vi first-script.sh
+```
+编辑如下内容
 
 ```bash
-touch first-step.sh
+#!/bin/bash
+
+echo -e "hello bash \xf0\x9f\x98\x81"
 
 ```
 
+保存执行
+
+```
+chmod +x first-script.sh
+./first-script.sh
+```
+
+你将得到下面的输出
+![first-script](img/first-script.png)

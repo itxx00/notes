@@ -2,46 +2,40 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 内容简介
 
-Let's discover **Docusaurus in less than 5 minutes**.
+众所周知，只练剑不练气无法登峰造极，而只练气不练剑容易走火入魔，因此剑气合一才是通往参透真谛的有效途径。
 
-## Getting Started
+本系列旨在通过记录整理过往所见所学，系统性介绍 bash shell scripts 编写，以及一些方法、技能树等，也算是
 
-Get started by **creating a new site**.
+对自己有个总结和交代。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+通过这些内容，希望能在技术提升（练剑）以及技巧方法（练气）方面给予你一些帮助，如果你碰巧读到，将是我的荣幸。
 
-### What you'll need
+需要注意的是，文档内容在不断完善更新中，如果有发现内容不准确或者有误、错别字的地方，也欢迎PR。
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+章节概要如下：
 
-## Generate a new site
+## 我的基础环境
 
-Generate a new Docusaurus site using the **classic template**.
+工欲善其事必先利其器，这里分享我所使用的基础环境以及使用方法、视频等。
 
-The classic template will automatically be added to your project after you run the command:
+1 我的 tmux 配置 [我的tmux配置](docs/my-tmux)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+2 tmux使用教程 [教程](https://xxxxx/)
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## shell编程系列
 
-The command also installs all necessary dependencies you need to run Docusaurus.
 
-## Start your site
 
-Run the development server:
+## shell编码规范
 
-```bash
-cd my-website
-npm run start
-```
+编码规范
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+工具使用
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## 技能树
+
+这里将有一颗技能树，从全局视角出发能有更多收获。
+

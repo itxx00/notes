@@ -29,6 +29,7 @@ chmod +x first-script.sh
 ```
 
 你将得到下面的输出
+
 ![first-script](img/first-script.png)
 
 至此你已经掌握了如何创建一个 shell 脚本文件，并且赋予其可执行权限，执行并得到了预期的输出。

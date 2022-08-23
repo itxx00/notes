@@ -119,11 +119,12 @@ a_command && {
 }
 ```
 
+### 常见的坑
 需要注意的是有少数同学喜欢将`if else`写成`&& ||`的结构，其实两者是不等价的，比如：
 ```bash
 command1 && command2 || command3
 ```
-如果是想表达当command1成功就执行command2，不然就执行command3的话那么就错了，因为当command2失败也会触发command3，而使用`if else`才能准确表达这层含义：
+如果是想表达当command1成功就执行command2，不然就执行command3的话那么就错了，因为当command2失败也会触发command3，必须使用`if else`才能准确表达这层含义：
 ```bash
 if command1; then command2; else command3 fi;
 ```

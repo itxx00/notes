@@ -2,7 +2,7 @@
 sidebar_position: 99
 ---
 
-# Congratulations!
+# 恭喜上车!
 
 你已经完成了第一部分的学习，可以顺带看看 **[shell简史](../shell-extras/shell-history.md)** 和 **[shell执行原理](../shell-extras/shell-exec-flow.md)**.
 

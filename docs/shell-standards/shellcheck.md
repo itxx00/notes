@@ -1,8 +1,5 @@
 ---
 sidebar_position: 2
 ---
-# dialog
 
-## xxx
-
-
+# shellcheck使用介绍

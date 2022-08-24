@@ -28,7 +28,7 @@ rm file1
 unlink file1
 ```
 
-## 读文件
+## 读取文件
 要从文件里面读取内容方法也很多，这里还是从简单的开始入手：
 ```bash
 # 读取整个文件
@@ -45,7 +45,7 @@ tail -1 /etc/passwd
 tail -c1 /etc/passwd
 ``
 
-## 写文件
+## 写入文件
 写入文件可以分交互式和非交互式的，交互式写入最常见的方式是通过编辑器如vi等打开一个文件，输入内容然后保存。非交互式的写入最常见的是将标准输出重定向到文件。例如：
 ```bash
 # 覆盖写
@@ -59,6 +59,23 @@ echo "hi" | tee file1
 dd of=file1 <<<"hi"
 ```
 
-## 
+## 其他文件操作
+
+```bash
+# 移动
+mv file1 file2
+# 复制
+cp file1 file2
+# 批量重命名
+rename .log .txt *.log
+# 合并
+cat file1 file2 >file3
+# 拆分
+split file1
+# 压缩
+tar czf file.tar.gz file*
+# 解压
+tar xf file.tar.gz
+```
 
 

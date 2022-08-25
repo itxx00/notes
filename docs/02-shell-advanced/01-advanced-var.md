@@ -2,24 +2,30 @@
 sidebar_position: 1
 ---
 # 变量进阶
-在基础篇中我们掌握了如何定义一个变量，以及如何引用他们，而关于变量还有更多的门门道道，有很多知识是我们在日常工作中必不可少的，下面跟着老司机的节奏操练起来。bash中有一类变量是预先就存在的或者是被保留的，姑且把这类变量统称为内置变量，内置变量主要包括环境变量/位置变量/特殊变量等，下面我们逐一研究。
+在基础篇中我们掌握了如何定义一个变量，以及如何引用他们，而关于变量还有更多的门门道道，有很多知识是我们在日常工作中必不可少的，下面跟着老司机的节奏操练起来。bash中有一类变量是预先就存在的或者是被保留的，姑且把这类变量统称为内置变量，内置变量主要包括环境变量，位置变量和其他特殊变量等，下面我们逐一研究。
 
 ## 环境变量
-Environment variables or ENVs basically define the behavior of the environment. They can affect the processes ongoing or the programs that are executed in the environment.  
+环境变量用于控制/显示进程的运行环境，改变环境状态，环境变量分全局和局部，全局变量在任何地方都能生效，局部变量只在其运行进程中生效。可以使用`printenv`命令查看当前生效的环境变量，要增加/修改全局环境变量通常可以在/etc/profile.d目录中通过单独的文件定义，修改用户的局部变量可以在home目录下.bash_profile和.bashrc中操作，这些文件的具体差别和加载时机可以参考[这篇文档](../../blog/2021-02-24-bash-rc-profile-exec-order.md) 。
 
-Scope of an environment variable
-Scope of any variable is the region from which it can be accessed or over which it is defined. An environment variable in Linux can have global or local scope.  
+常见的环境变量有`$PATH $USER $UID $HOSTNAME $LANG` 等。
 
-Global
-
-A globally scoped ENV that is defined in a terminal can be accessed from anywhere in that particular environment which exists in the terminal. That means it can be used in all kind of scripts, programs or processes running in the environment bound by that terminal. 
-
-Local
-
-A locally scoped ENV that is defined in a terminal cannot be accessed by any program or process running in the terminal. It can only be accessed by the terminal( in which it was defined) itself. 
 
 ## 位置变量
-$0
+或者叫位置参数，用来在命令行或脚本中向执行的命令/函数传递参数。例如`$0`代表被执行的脚本名，如果是软连接则为软链接的文件名而非实际文件名，`$1`代表第一个位置传递的参数，以此类推。下面看示例：
+```bash
+#!/bin/bash
+proc=$(basename $0)
+if [[ $proc = abc ]]; then
+	echo "$1$2$3$4$5"
+elif [[ $proc = cba ]]; then
+	echo "$5$4$3$2$1"
+fi
+```
+执行时通过位置传递参数：
+
+![pos](./img/pos.png)
+
+从输出中我们可以直观的感受到位置参数的使用。
 
 ## 特殊变量
 ```

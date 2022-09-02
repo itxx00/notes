@@ -44,7 +44,7 @@ bash中还有一些特殊的变量，常用的特殊变量见下表：
 
 
 ## 变量默认值
-有时候一个变量是通过其他参数赋值，当不能被赋值的时候想要设置一个默认值，例如下面这样：
+有时候一个变量是通过其他参数赋值，当不能被赋值的时候想要设置一个默认值，例如：
 ```bash
 var1="default"
 [[ -n $1 ]] && var1="$1"
@@ -53,7 +53,7 @@ var1="default"
 ```
 var1=${1:-"default"}
 ```
-另外一种情况是变量可能是在另外一个地方被赋值，当没有被赋值的时候需要给这变量设置默认值，例如下面这样：
+另外一种情况是变量可能是在另外一个地方被赋值，当没有被赋值的时候需要给这变量设置默认值，例如：
 ```bash
 [[ -n $var2 ]] || var2="default"
 ```
@@ -65,14 +65,72 @@ var2=${var2:-default}
 ```
 这里需要注意`k=${v:-x}` 和 `k=${v:=x}` 两种写法的区别，前者赋值k的同时变量v的值不变，后者赋值k的同时如果变量v为空也会被赋值。
 
-## 变量长度
+还有一种情况是需要实现当变量不存在时，就输出异常信息，不再继续执行，例如：
+```bash
+[[ -n $var3 ]] || {
+	echo "var3 not defined" >&2
+	return 1
+}
+echo $var3
+```
+对应的可以写成：
+```bash
+echo ${var3:?var3 not defined}
+```
 
+## 变量长度
+要获取一个变量值的长度，可以这样：
+```bash
+var1="012345"
+echo ${#var1}
+# 如果是数组，获取数组元素个数需要写成：
+echo ${#var1[@]}
+# 获取位置参数个数
+echo ${#@}
+```
 
 ## 变量替换
 
-## 变量截取
-变量截取
 
+
+## 变量截取
+```
+${var#Pattern}, ${var##Pattern}
+```
+从变量 $var 的开头删除最短或最长匹配 $Pattern 的子串. 
+
+```
+${var%Pattern}, ${var%%Pattern}
+```
+从变量 $var 的结尾删除最短或最长匹配 $Pattern 的子串. 
+
+
+${var:pos}
+
+变量var从位置pos开始扩展
+
+${var:pos:len}
+
+变量var从位置pos开始, 并扩展len个字符.
+${var/Pattern/Replacement}
+
+使用Replacement来替换变量var中第一个匹配 Pattern 的字符串.
+
+如果省略Replacement, 那么第一个匹配Pattern的字符串将被替换为空, 也就是被删除了.
+${var//Pattern/Replacement}
+
+全局替换. 所有在变量var匹配Pattern的字符串, 都会被替换为Replacement.
+
+${var/#Pattern/Replacement}
+
+如果变量var的前缀匹配Pattern, 那么就使用Replacement来替换匹配到Pattern的字符串.
+${var/%Pattern/Replacement}
+
+如果变量var的后缀匹配Pattern, 那么就使用Replacement来替换匹配到Pattern的字符串.
+
+${!varprefix*}, ${!varprefix@}
+
+匹配所有之前声明过的, 并且以varprefix开头的变量.
 
 
 ## 进制转换

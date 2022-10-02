@@ -89,48 +89,69 @@ echo ${#var1[@]}
 echo ${#@}
 ```
 
+## 字符串截取
+假如有一个字符串，需要按位置截取其部分内容，在bash中操作方法如下：
+```bash
+var=abcde
+# 从指定位置开始，到后面的全部，位置下标从0开始计数
+echo ${var:2}  #cde
+# 从指定位置开始，到后面取指定个数的字符
+echo ${var:2:2} #cd
+# 从结尾开始往前取指定个数的字符
+echo ${var:(-2)}  #de
+```
+
 ## 变量替换
+bash内置了一些对于变量的操作可以方便我们对字符串进行简单加工处理。
 
-
-
-## 变量截取
+### 大小写转换
+```bash
+var=aBcD
+# 大小写互换
+echo ${var~~} #AbCd
+# 全部大写
+echo ${var^^} #ABCD
+echo ${var,,} #abcd
 ```
-${var#Pattern}, ${var##Pattern}
+
+### 从开头删除匹配
+```bash
+# ${var#Pattern}, ${var##Pattern}
+# 从变量开头删除最短或最长匹配 Pattern 的子串，注意是从第一个字符就开始匹配，不是从左往右搜索，例如：
+var=abc123abc456.avi
+echo ${var#123} #abc123abc456.avi ，然并卵，开头不是123
+echo ${var#abc} #123abc456.avi ，开头的abc被拿掉
+echo ${var##abc} #还是123abc456.avi ，abc最长匹配并不是往右边搜索全部abc的意思
+echo ${var##a*c} #456.avi ，利用*号匹配任意字符
+echo ${var##*.} #avi， 从开头最长匹配任意字符和一个点，剩下拓展名
 ```
-从变量 $var 的开头删除最短或最长匹配 $Pattern 的子串. 
+### 从结尾删除匹配
+```bash
+# ${var%Pattern}, ${var%%Pattern}
+# 从变量结尾删除最短或最长匹配 Pattern 的子串，注意是结尾第一个字符就开始匹配，不是从右往左搜索，例如：
+var=abc123abc456.avi
+echo ${var%c*.avi} #abc123ab
+echo ${var%%c*.avi} #ab
+```
+
+### 替换匹配
+```bash
+# ${var/Pattern/Replacement}, ${var//Pattern/Replacement}
+# 替换第一个匹配或者全部匹配，省略Replacement则匹配将被替换为空，例如：
+var=abcabcavi.avi
+echo ${var/abc/yes} #yesabcavi.avi
+echo ${var//abc/yes} #yesyesavi.avi
+# 也支持匹配头和尾，#Pattern表示只匹配开头，%Pattern表示只匹配结尾，例如：
+echo ${var/avi/doc} #abcabcdoc.avi ，没有指定结尾，第一个匹配被替换
+echo ${var/%avi/doc} #abcabcavi.doc ，只匹配结尾，则结尾的匹配被替换
+
+### 间接引用
+```bash
+var1=123
+var2=var1
+echo ${var2}  #var1
+echo ${!var2} #123
+# ${!prefix*} 或 ${!prefix@} 匹配prefix开头的所有变量名
+echo ${!var*} # var1 var2
 
 ```
-${var%Pattern}, ${var%%Pattern}
-```
-从变量 $var 的结尾删除最短或最长匹配 $Pattern 的子串. 
-
-
-${var:pos}
-
-变量var从位置pos开始扩展
-
-${var:pos:len}
-
-变量var从位置pos开始, 并扩展len个字符.
-${var/Pattern/Replacement}
-
-使用Replacement来替换变量var中第一个匹配 Pattern 的字符串.
-
-如果省略Replacement, 那么第一个匹配Pattern的字符串将被替换为空, 也就是被删除了.
-${var//Pattern/Replacement}
-
-全局替换. 所有在变量var匹配Pattern的字符串, 都会被替换为Replacement.
-
-${var/#Pattern/Replacement}
-
-如果变量var的前缀匹配Pattern, 那么就使用Replacement来替换匹配到Pattern的字符串.
-${var/%Pattern/Replacement}
-
-如果变量var的后缀匹配Pattern, 那么就使用Replacement来替换匹配到Pattern的字符串.
-
-${!varprefix*}, ${!varprefix@}
-
-匹配所有之前声明过的, 并且以varprefix开头的变量.
-
-
-## 进制转换

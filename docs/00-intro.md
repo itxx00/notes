@@ -18,18 +18,8 @@ sidebar_position: 1
 
 2 tmux使用教程 [教程](https://xxxxx/)
 
-## shell编程系列
+## 关于我
 
+欢迎关注老司机的公众号获取更新资讯，
 
-
-## shell编码规范
-
-编码规范
-
-工具使用
-
-
-## 技能树
-
-这里将有一颗技能树，从全局视角出发能有更多收获。
-
+![laosijiya666](./01-shell-basic/img/myqr.jpg)

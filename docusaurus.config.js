@@ -67,9 +67,10 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '教程',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog/archive/', label: '历史博文', position: 'left'},
+          {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/itxx00/notes',
             label: 'GitHub',

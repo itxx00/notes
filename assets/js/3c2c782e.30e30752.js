@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[980],{7002:e=>{e.exports=JSON.parse('{"permalink":"/notes/blog/tags/bash","page":1,"postsPerPage":10,"totalPages":2,"totalCount":15,"nextPage":"/notes/blog/tags/bash/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

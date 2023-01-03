@@ -77,3 +77,38 @@ reboot
 yum -y install qemu-img
 qemu-img convert -f raw -O qcow2 /dev/vdb /kylin.qcow2
 ```
+## 5 镜像创建CVM后启动失败问题一例
+
+### 报错信息如下：
+
+```
+/dev/disk/by-uuid/bed44859-b637-4490-b7f9-f62f952f6hfa Warning:does not exist
+
+Generating "/run/initramfs/rdsosreport.txt"
+
+Entering emergency mode. Exit the shell to continue."journalctl" to view system logs.TypeYou might want to save "/run/initramfs/rdsosreport.txt" to a USB stick or /bootaftermounting them and attach it to a bug report.
+```
+### 原因分析：
+
+##### 1.virtio驱动安装的不准确或者异常
+##### 2.内核缺陷本身导致
+
+### 解决方法：
+##### 1.Virtio驱动的修复
+
+```
+查询
+grep -i virtio /boot/config-$(uname -r)
+是否包含在临时文件系统
+lsinitrd /boot/initramfs-$(uname -r).img | grep virtio
+修复临时文件系统
+vim /etc/dracut.conf
+add_drivers+="virtio_blk virtio_scsi virtio_net virtio_pci virtio_ring virtio"
+dracut -f
+```
+##### 2.内核缺陷规避
+```
+echo 'add_drivers+="xen-netfront xen-blkfront "' > /etc/dracut.conf.d/xen.conf
+KERNEL_VERSION=$(rpm -q kernel --qf '%{V}-%{R}.%{arch}\n'|head -n1)
+dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+```

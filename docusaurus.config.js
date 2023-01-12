@@ -82,20 +82,17 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'More',
+            title: '老板大气，月入过亿！打发点啊！',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/itxx00',
-              },
+          {
+            html: `
+              <img src="/notes/img/laobandaqi.jpeg" style="width:888px;height:888px;" alt="老板大气，月入过亿！" />
+              `,
+          },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 老司机. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 老司机.`,
       },
       prism: {
         theme: lightCodeTheme,

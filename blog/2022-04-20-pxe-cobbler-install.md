@@ -134,7 +134,7 @@ system - 各个机器所使用的profile实例，与机器MAC地址绑定，可�
 
 首先拷贝cobbler默认的template生成一个自定义的ks template，
 ```
-# kickstart template for TBDS
+# kickstart template
 # (includes %end blocks)
 # do not use with earlier distros
 
@@ -185,7 +185,7 @@ $SNIPPET('main_partition_select')
 $SNIPPET('log_ks_pre')
 $SNIPPET('kickstart_start')
 $SNIPPET('pre_install_network_config')
-$SNIPPET('pre_partition_select_tbds')
+$SNIPPET('pre_partition_select_custom')
 # Enable installation monitoring
 $SNIPPET('pre_anamon')
 %end
@@ -237,7 +237,7 @@ $SNIPPET('kickstart_done')
 %end
 ```
 
- 注意ks template中的红色部分为我们增加的自定义snippets，第一个pre_partition_select_tbds作用是自动根据磁盘类型来生成分区和格式化选项，同时兼容虚拟机和物理机，内容如下：
+ 注意ks template中的红色部分为我们增加的自定义snippets，第一个pre_partition_select_custom作用是自动根据磁盘类型来生成分区和格式化选项，同时兼容虚拟机和物理机，内容如下：
 
 ```
 # Determine architecture-specific partitioning needs

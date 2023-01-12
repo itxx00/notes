@@ -64,12 +64,12 @@ shell函数也支持递归调用，例如
 #!/bin/bash
 
 sequence() {
-	local start=$1
-	local end=$2
-	local value=${value:-$start}
-	echo $value
-	((value++))
-	[[ $value -le $end ]] && sequence $start $end
+    local start=$1
+    local end=$2
+    local value=${value:-$start}
+    echo $value
+    ((value++))
+    [[ $value -le $end ]] && sequence $start $end
 }
 
 sequence 1 10

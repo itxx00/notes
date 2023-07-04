@@ -16,9 +16,9 @@ sidebar_position: 1
 #!/bin/bash
 proc=$(basename $0)
 if [[ $proc = abc ]]; then
-	echo "$1$2$3$4$5"
+    echo "$1$2$3$4$5"
 elif [[ $proc = cba ]]; then
-	echo "$5$4$3$2$1"
+    echo "$5$4$3$2$1"
 fi
 ```
 执行时通过位置传递参数：
@@ -42,6 +42,8 @@ bash中还有一些特殊的变量，常用的特殊变量见下表：
 | $RANDOM | 随机数字 | 输出一个随机数 |
 | $FUNCNAME | 函数名 | 输出当前函数的名称 |
 | $LINENO | 行号 | 输出当前所在行的行号 |
+| $PIPESTATUS[n] | 管道返回值 | 输出管道连接的第n+1个命令的返回值 |
+
 
 
 ## 变量默认值

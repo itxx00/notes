@@ -71,8 +71,8 @@ var2=${var2:-default}
 还有一种情况是需要实现当变量不存在时，就输出异常信息，不再继续执行，例如：
 ```bash
 [[ -n $var3 ]] || {
-	echo "var3 not defined" >&2
-	return 1
+    echo "var3 not defined" >&2
+    return 1
 }
 echo $var3
 ```

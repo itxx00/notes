@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3428],{332:e=>{e.exports=JSON.parse('{"label":"coding_style","permalink":"/notes/blog/tags/coding-style","allTagsPath":"/notes/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[795],{4952:e=>{e.exports=JSON.parse('{"label":"firewalld","permalink":"/notes/blog/tags/firewalld","allTagsPath":"/notes/blog/tags","count":1}')}}]);

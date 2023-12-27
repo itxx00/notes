@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[5426],{4121:e=>{e.exports=JSON.parse('{"label":"nftables","permalink":"/notes/blog/tags/nftables","allTagsPath":"/notes/blog/tags","count":1,"unlisted":false}')}}]);

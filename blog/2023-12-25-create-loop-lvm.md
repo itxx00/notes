@@ -13,6 +13,8 @@ tags: [bash, ]
 dd if=/dev/zero of=pv1 bs=1M count=5000
 # 然后通过losetup将其挂载到loop0设备上
 sudo losetup /dev/loop0 pv1
+# 查看状态
+sudo losetup
 # 这时可以对loop0设备进行操作，当做一个block设备使用
 sudo pvcreate /dev/loop0
 sudo vgcreate vg0 /dev/loop0
@@ -23,3 +25,12 @@ sudo mkdir /data01
 sudo mount /dev/vg0/lv0 /data01
 ```
 这样我们就完成了通过dd出一个空文件，然后通过loop设备模拟了一个lvm逻辑卷出来。
+使用完之后清理：
+```
+sudo umount /data01
+sudo lvremove /dev/vg0/lv0
+sudo vgremove vg0
+sudo pvremove /dev/loop0
+sudo losetup -d /dev/loop0
+rm pv1
+```

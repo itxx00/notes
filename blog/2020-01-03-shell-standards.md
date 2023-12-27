@@ -9,7 +9,6 @@ tags: [bash, ]
 > 这里是一句长长的引言
 
 * Shell 编码规范
-{:toc .toc}
 
 ## 前言
 

@@ -8,8 +8,6 @@ tags: [openvpn, freeradius]
 
 > 本文记录了在centos5.5系统中搭建openvpn+mysql+freeradius的过程
 
-* Kramdown table of contents
-{:toc .toc}
 
 系统环境：centos5.5
 

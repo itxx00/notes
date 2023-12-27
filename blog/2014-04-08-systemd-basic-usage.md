@@ -8,8 +8,6 @@ tags: [systemd]
 
 > 但是由于计算机软硬件的不断发展，人们逐渐发现sysvinit所提供的功能已经无法满足当前的需求，服务多年的sysvinit终将过时，于是一些替代的方案开始出现，这其中包括upstart ，systemd等。
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 关于PID 1
 在linux的世界里，第一个启动到用户空间的进程名叫init，其pid为1，init进程启动完毕后，它相当于其他进程的根，负责将其他的服务进程启动起来，最终启动成为一个完整可用的系统。而提供这个init程序的软件名为sysvinit，它在整个linux系统中所担任的角色重要程度无可厚非。但是由于计算机软硬件的不断发展，人们逐渐发现sysvinit所提供的功能已经无法满足当前的需求，服务多年的sysvinit终将过时，于是一些替代的方案开始出现，这其中包括upstart ，systemd等。

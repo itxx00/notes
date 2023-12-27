@@ -8,8 +8,6 @@ tags: [msf, security]
 
 > N年前使用metasploit框架过程中写下的学习笔记
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 一．名词解释
 
@@ -48,9 +46,11 @@ help connect
 ### msfcli
 3、msfcli 和msfconsole相比不提供交互方式，它直接从命令行输入所有参数并产生结果，
 
+```
 msfcli –h #获取帮助信息
-
 msfcli <exploit_name> <option=value> [mode]
+```
+
 
 ```
 mode:H（help）帮助

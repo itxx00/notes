@@ -7,10 +7,6 @@ tags: [bash, ]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
-
-
 ### 基本介绍：
 PXE（preboot execute environment）由Intel发明的通过网络快速引导操作系统的技术，其原理是在机器引导时通过server端为网卡DHCP分配IP信息，并通知client端next_server中的tftp地址，client端继续通过tftp下载系统引导镜像，加载并完成启动。这里我们还会用到另外一项技术叫kickstart，由红帽开发，早先用于其系统安装工具中以完成自动化安装，已被众多发行版支持。系统引导时可以通过kickstart配置文件中指定的安装流程自动完成后续步骤，减少人工干预。而通常手工配置dhcp、tftp、kickstart等往往比较繁琐，这里我们会利用红帽开发的另外一款工具cobbler，通过cobbler来完成整个dhcp、tftp、kickstart等组成的server端环境的快速搭建和管理，以此提高效率。
 

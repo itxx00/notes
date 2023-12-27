@@ -8,8 +8,6 @@ tags: [hadoop,bigdata]
 
 > 记录hadoop3.0.0版本测试安装过程，对hadoop3.0.0中纠删码进行了简单测试。
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 基础环境
 

@@ -8,8 +8,6 @@ tags: [changelog, conventional-changelog, strapdown.js]
 
 > 一个项目的changelog对于使用者来说虽然不需要重点关注，但很重要
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 基本思路
 

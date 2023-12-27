@@ -8,8 +8,6 @@ tags: [os,centos,grub,centos8 ]
 
 > 电脑双系统centos+windows，安装完centos8之后默认没有引导windows的入口，按照下面方法手搓即可。
 
-* Kramdown table of contents
-{:toc .toc}
 ## 1 启动进入centos
 查看磁盘分区信息，如下：
 ```fdisk -l```

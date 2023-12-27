@@ -8,8 +8,6 @@ tags: [system,shell]
 
 > 记录awx的安装测试过程以及需要注意的点
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 关于awx
 

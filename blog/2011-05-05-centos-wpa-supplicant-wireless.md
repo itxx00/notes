@@ -8,8 +8,6 @@ tags: [wpa-supplicant, wireless ]
 
 > 之前在使用桌面的过程中，发现如果需要连接无线网 ， 那么networkmanager是首选的，自动管理网卡，自动扫描信号，用起来各种舒服；但是突然有一天发现networkmanager干了某些我不期望它干的事情，于是果断yum remove之，由于一气之下remove掉了networkmanager，并没有考虑到还得用它来连接无线，导致后来发现需要连无线的时候极为不方便，最终发现可以使用wpa-supplicant来管理无线网络连接。
 
-* Kramdown table of contents
-{:toc .toc}
 
 
 其实很多人都推荐用这个了wpa_supplicant，但是由于一直没有这个必要所以就一直没有学会使用，今天用了下感觉还真不错。 wpa_supplicant首先在/etc/init.d/wpa_supplicant 有一个启动控制脚本，然后有/etc/wpa_supplicant/wpa_supplicant.conf这个默认配置文件，还有一个/etc/sysconfig/wpa_supplicant的全局配置文件，

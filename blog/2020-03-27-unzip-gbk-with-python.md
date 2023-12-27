@@ -8,8 +8,6 @@ tags: [bash, python ]
 
 > 编码问题很烦人
 
-* Kramdown table of contents
-{:toc .toc}
 
 gbk编码的zip在linux下解压出来文件名会乱码，可以用下面脚本解压过程中转换下
 

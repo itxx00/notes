@@ -8,8 +8,6 @@ tags: [libvirt, tc, bandwidth ]
 
 > 在kvm虚拟机管理的过程当中，对虚拟机带宽进行良好的控制是十分重要的。
 
-* Kramdown table of contents
-{:toc .toc}
 
 
 linux系统当中对网络带宽的控制一般都是使用tc命令实现，tc即是traffic control的缩写，在[这里](http://linux-ip.net/articles/Traffic-Control-HOWTO/)可以找到有关tc命令的内容。

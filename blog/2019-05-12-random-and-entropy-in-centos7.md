@@ -8,8 +8,6 @@ tags: [centos7, random, entropy]
 
 > 本文试着总结系统中的随机数前前后后以及管理中需要注意的问题 [先欠着]
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 1 什么是随机数？
 

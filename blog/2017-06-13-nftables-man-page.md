@@ -8,8 +8,6 @@ tags: [nft, nftables ]
 
 > 利用空闲时间学习了nftables的基础知识，其中官方的man page中包含了大量信息，在阅读过程中整理了一份带中文注释的笔记，以辅助加深记忆。
 
-* Kramdown table of contents
-{:toc .toc}
 
 
 ## 工具名称
@@ -582,7 +580,7 @@ List-and-reset stateful object.
 
 ### Ct
 
-***ct*** {helper} {type} {type} {protocol} {protocol} [l3proto] [family]
+***ct*** ```{helper} {type} {type} {protocol} {protocol} [l3proto] [family]```
 
 Ct helper is used to define connection tracking helpers that can then be used in combination with the "ct helper set" statement. type and protocol are mandatory, l3proto is derived from the table family by default, i.e. in the inet table the kernel will try to load both the ipv4 and ipv6 helper backends, if they are supported by the kernel.
 
@@ -1052,7 +1050,7 @@ filter output oif eth0
 
 ### fib expressions
 
-***fib*** {saddr | daddr [mark | iif | oif]} {oif | oifname | type}
+***fib*** \{saddr | daddr [mark | iif | oif]]\} \{oif | oifname | type\}
 
 A fib expression queries the fib (forwarding information base) to obtain information such as the output interface index a particular address would use. The input is a tuple of elements that is used as input to the fib lookup functions.
 
@@ -1090,7 +1088,7 @@ filter prerouting meta mark set 0xdead fib daddr . mark type vmap { blackhole : 
 
 ### Routing expressions
 
-***rt*** {classid | nexthop}
+***rt*** \{classid | nexthop\}
 
 A routing expression refers to routing data associated with a packet.
 
@@ -1882,7 +1880,7 @@ Note that all nat statements require both prerouting and postrouting base chains
 
 | Expression | Description | Type |
 | --- | --- | --- |
-| address | Specifies that the source/destination address of the packet should be modified. You may specify a mapping to relate a list of tuples composed of arbitrary expression key with address value. | ipv4_addr, ipv6_addr, eg. abcd::1234, or you can use a mapping, eg. meta mark map { 10 : 192.168.1.2, 20 : 192.168.1.3 } |
+| address | Specifies that the source/destination address of the packet should be modified. You may specify a mapping to relate a list of tuples composed of arbitrary expression key with address value. | ipv4_addr, ipv6_addr, eg. abcd::1234, or you can use a mapping, eg. meta mark map \{ 10 : 192.168.1.2, 20 : 192.168.1.3 \} |
 | port | Specifies that the source/destination address of the packet should be modified. | port number (16 bits) |
 
 
@@ -2073,8 +2071,8 @@ nftables was written by Patrick McHardy and Pablo Neira Ayuso, among many other 
 
 ## Copyright
 
-* Copyright © 2008-2014 Patrick McHardy <[kaber@trash.net](mailto:kaber@trash.net)>
-* Copyright © 2013-2016 Pablo Neira Ayuso <[pablo@netfilter.org](mailto:pablo@netfilter.org)>
+* Copyright © 2008-2014 Patrick McHardy \<[kaber@trash.net](mailto:kaber@trash.net)\>
+* Copyright © 2013-2016 Pablo Neira Ayuso \<[pablo@netfilter.org](mailto:pablo@netfilter.org)\>
 
 nftables is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.
 

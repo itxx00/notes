@@ -8,8 +8,6 @@ tags: [k8s,kubernetes ]
 
 > 本文记录了在本地部署k8s测试环境的过程，部署脚本参考github上其他同学分享的脚本，在其基础上做了些小改动。
 
-* Kramdown table of contents
-{:toc .toc}
 
 
 ## k8s 中的节点类型

@@ -8,8 +8,6 @@ tags: [bash, ]
 
 > 在使用中标麒麟V7Update6版本时，遇到了一个ansible执行报错的问题
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 问题现象
 
@@ -134,7 +132,7 @@ ansible/module_utils/facts/system/pkg_mgr.py
         return pkg_mgr_name
 
 ```
-以上代码可以看到当判断系统为红帽系，则会继续判断系统版本信息，当主版本号<8则使用yum，否则使用dnf，这里我们初步判断为麒麟对系统做了某些修改导致无法获取到主版本号。先执行setup获取发行版代号验证下是否执行了上述逻辑：
+以上代码可以看到当判断系统为红帽系，则会继续判断系统版本信息，当主版本号小于8则使用yum，否则使用dnf，这里我们初步判断为麒麟对系统做了某些修改导致无法获取到主版本号。先执行setup获取发行版代号验证下是否执行了上述逻辑：
 
 ```
 # ansible -i hosts node01 -m setup -a "filter=ansible_distribution"

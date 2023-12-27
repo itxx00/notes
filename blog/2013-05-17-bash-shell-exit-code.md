@@ -8,8 +8,6 @@ tags: [bash, exitcode]
 
 > 编写shell脚本的时候，正确使用返回值是运维人员的基本操守
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 1.常见返回值
 

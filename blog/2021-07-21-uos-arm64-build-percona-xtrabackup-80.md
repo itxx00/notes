@@ -7,9 +7,6 @@ tags: [bash, ]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
-
 ## 1 系统环境
 
 ```

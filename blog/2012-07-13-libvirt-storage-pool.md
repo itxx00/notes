@@ -10,8 +10,6 @@ redirect_from:
 
 > 简单演示如何在libvirt中创建storage pool
 
-* Kramdown table of contents
-{:toc .toc}
 
  
 libvirt提供了存储管理的功能，可以管理的存储类型有 目录  lvm逻辑卷 磁盘 iscsi存储  scsi存储  mpath netfs等，这里以最基本的目录类型为例

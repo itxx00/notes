@@ -10,8 +10,6 @@ redirect_from:
 
 > 这是一篇关于snapshots, blockpull, blockcommit的的介绍.作者和with Eric Blake, Jeff Cody,Kevin Wolf以及很多IRC和mailing lists里面的同学大量讨论以及作者大量的特向测试的基础之上总结出来的
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 基础知识
 
@@ -256,9 +254,9 @@ Figure-3
 
 举个例子，有以下场景：
 
-当前: [base] <- sn1 <- sn2 <- sn3 <- sn4(this is active)
+当前: ```[base] <- sn1 <- sn2 <- sn3 <- sn4(this is active)```
 
-目标: [base] <- sn1 <- sn4 (如此来丢弃sn2,sn3)
+目标: ```[base] <- sn1 <- sn4 (如此来丢弃sn2,sn3)```
 
   下面有两种方式，method-a更快,method-b 慢些，但是sn2有效可用. (VM运行态).
 
@@ -336,7 +334,7 @@ Figure-5
 
 假设快照已经使用 创建Snapshots 小节中的方式完成:
 
-如*Figure-5*中描述的-- [RootBase] <- [Active].
+如*Figure-5*中描述的-- ```[RootBase] <- [Active]```.
 
 ```
 # virsh blockpull --domain RootBase  \
@@ -452,12 +450,14 @@ Figure-6
 ```
 libvirt现在还没有删除外置快照的功能，但是可以使用*qemu-img*命令来完成.
 
-比如我们有这样一条链(VM*offline*状态): base <- sn1 <- sn2 <- sn3
+比如我们有这样一条链(VM*offline*状态): ```base <- sn1 <- sn2 <- sn3```
 
 现在删除第二个快照(sn2).有两种方式:
 
+```
 * Method (1): base <- sn1 <- sn3 (by copying sn2 into sn1)
 * Method (2): base <- sn1 <- sn3 (by copying sn2 into sn3)
+```
 
 Method (1)
 

@@ -8,8 +8,6 @@ tags: [libvirt, network]
 
 > 逐步分析libvirt中的网络管理方法及实践，分析在nat网络中遇到的问题及解决思路
 
-* Kramdown table of contents
-{:toc .toc}
 
 
 

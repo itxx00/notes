@@ -7,8 +7,6 @@ tags: [bash, ]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 1 运行dozzle
 ```

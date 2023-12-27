@@ -8,8 +8,6 @@ tags: [ovirt, stateless]
 
 > 我发现ovirt的node也就是运行虚拟机的主机被设计成了这样：整个根文件系统是只读的，只有部分配置文件被独立出来放到了另外的分区，问了几位IBM和红帽的工程师，明白了为什么需要这种stateless也就是无状态的设计
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## Ovirt简介
 这是来自centos wiki中的描述：

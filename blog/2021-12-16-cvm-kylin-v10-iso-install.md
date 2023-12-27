@@ -6,10 +6,7 @@ tags: [kylin, cvm]
 ---
 
 
-* Kramdown table of contents
-{:toc .toc}
-
-> 背景：云上没有kylin的arm镜像,需要自己做一个
+背景：云上没有kylin的arm镜像,需要自己做一个
 
 ## 1 准备
 iso: Kylin-Server-10-SP2-aarch64-Release-Build09-20210524.iso

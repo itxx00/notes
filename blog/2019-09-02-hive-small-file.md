@@ -8,8 +8,6 @@ tags: [hive, ]
 
 > 介绍hive小文件常见处理方法
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## hive的文件产生过程
 

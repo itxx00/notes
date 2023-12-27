@@ -9,8 +9,6 @@ tags: [bash,rpm, rpmrebuild ]
 > 某些特殊紧急情况下... ...
 
 
-* Kramdown table of contents
-{:toc .toc}
 
 某些特殊紧急情况下没法等到重新从源码编译打包，手里只有一个打包好的rpm，但是里面内容需要在安装前就改掉，比如修改某个文件内容等，这个时候rpmrebuild命令可以派上用场。
 rpmrebuild工作时会把rpm包内容释放到一个临时目录，如果需要修改rpm包里面的文件的话， 可以通过-m参数指定执行的命令，比如/bin/bash，这样就可以得到一个交互式的shell，

@@ -5,8 +5,6 @@ categories: [shell]
 tags: [bash, ]
 ---
 
-* Kramdown table of contents
-{:toc .toc}
 
 build-tmux-static.sh
 ```

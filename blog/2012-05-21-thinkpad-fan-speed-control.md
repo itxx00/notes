@@ -8,8 +8,6 @@ tags: [thinkpad, fan]
 
 > 笔记本长期处于高强度高负荷工作状态，手放到出风口的时候差点被烫伤，再不调整下恐怕到了夏天是彻底扛不住了。于是网上搜了下资料，还好thinkpad一直都有黑客在用...
 
-* Kramdown table of contents
-{:toc .toc}
 
 还好thinkpad一直都有黑客在用，因此也不缺乏内核级别的支持，下面记录下配置方法，怕今后再要捣鼓的时候忘记。首先thinkpad有一个专用的acpi驱动叫thinkpad_acpi的内核模块，这个在centos里面已经自带了，它的项目地址http://ibm-acpi.sf.net/。上面有列出支持哪些哪些型号哪些功能。
 

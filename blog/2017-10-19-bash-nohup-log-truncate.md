@@ -8,8 +8,6 @@ tags: [system,shell]
 
 > 遇到某服务进程产生的日志始终无法切割，原来原因在这里
 
-* Kramdown table of contents
-{:toc .toc}
 
 ## 问题现象
 

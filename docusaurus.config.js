@@ -80,18 +80,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: '老板大气，月入过亿！打发点啊！',
-            items: [
-          {
-            html: `
-              <img src="/notes/img/laobandaqi.jpeg" style="width:888px;height:888px;" alt="老板大气，月入过亿！" />
-              `,
-          },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} 老司机.`,
       },
       prism: {

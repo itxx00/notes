@@ -16,6 +16,12 @@ show retention policies
 create database db2 with duration 30d replication 2
 ```
 
+## retention
+```
+alter retention policy default on db1 duration 168h default
+show retention policies
+```
+
 
 ## measurements
 ```

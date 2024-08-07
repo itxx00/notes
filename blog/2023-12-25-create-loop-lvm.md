@@ -18,7 +18,7 @@ sudo losetup
 # 这时可以对loop0设备进行操作，当做一个block设备使用
 sudo pvcreate /dev/loop0
 sudo vgcreate vg0 /dev/loop0
-sudo lvcreate -n lv0 --size 1G vg0
+sudo lvcreate -n lv0 -l 100%FREE vg0
 # 创建好lv之后就可以继续格式化文件系统
 sudo mkfs.ext4 /dev/vg0/lv0
 sudo mkdir /data01

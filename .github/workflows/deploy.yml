@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: setup build env
         uses: actions/setup-node@v3
@@ -36,7 +36,7 @@ jobs:
       - name: build
         run: |
           yarn install --frozen-lockfile
-          USE_SSH=true yarn deploy
+          yarn build
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4

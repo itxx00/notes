@@ -890,5 +890,5 @@ cleanup
 
 ## 附：常用工具
 推荐以下工具帮助我们进行代码的规范：
-- [ShellCheck](https://shellcheck.storage.googleapis.com/index.html "shell script analysis tool")
+- [ShellCheck](https://github.com/koalaman/shellcheck/releases/ "shell script analysis tool")
 

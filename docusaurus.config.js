@@ -38,11 +38,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/itxx00/notes/tree/main/',
-          mermaid: true,
         },
         blog: {
           showReadingTime: true,
-          mermaid: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

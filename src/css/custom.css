@@ -4,7 +4,102 @@
  * work well for content-centric websites.
  */
 
+/* 全局box-sizing重置 */
+* {
+  box-sizing: border-box !important;
+}
+
 /* You can override the default Infima variables here. */
+:root {
+  --ifm-container-width: 1920px !important;
+  --ifm-container-width-xl: 1920px !important;
+  --ifm-main-width: 100% !important;
+  --ifm-spacing-horizontal: 0.5rem !important;
+  --ifm-spacing-horizontal-xl: 0.5rem !important;
+}
+
+/* 覆盖所有可能的父容器 */
+.app-container, .site-container, .container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 响应式调整 */
+@media (min-width: 1200px) {
+  :root {
+    --ifm-container-width: 1920px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --ifm-container-width: 2200px !important;
+  }
+}
+
+/* 更激进地减小侧边栏宽度 */
+.docSidebarContainer {
+  max-width: 180px !important;
+  flex: 0 0 180px !important;
+}
+
+.rightSidebar {
+  max-width: 160px !important;
+  flex: 0 0 160px !important;
+}
+
+/* 增大主内容区域宽度并确保没有最大宽度限制 */
+.docMainContainer, .blogMainContainer {
+  max-width: calc(100% - 340px) !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+}
+
+/* 博客侧边栏宽度调整 */
+.blogSidebar {
+  max-width: 200px !important;
+  flex: 0 0 200px !important;
+}
+
+/* 确保父容器不限制宽度 */
+.container {
+  max-width: var(--ifm-container-width) !important;
+  padding-left: var(--ifm-spacing-horizontal) !important;
+  padding-right: var(--ifm-spacing-horizontal) !important;
+}
+
+/* 确保侧边栏宽度包含内边距 */
+.docSidebarContainer, .rightSidebar {
+  box-sizing: border-box !important;
+}
+
+/* 针对大屏幕的额外调整 */
+@media (min-width: 1440px) {
+  .docMainContainer {
+    max-width: calc(100% - 320px) !important;
+  }
+}
+
+.main-wrapper, .site-wrapper, .docs-wrapper, .blog-wrapper {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 高分辨率屏幕优化 */
+@media (min-width: 1920px) {
+  :root {
+    --ifm-container-width: 2200px !important;
+  }
+  .docMainContainer, .blogMainContainer {
+    max-width: calc(100% - 300px) !important;
+  }
+  .docSidebarContainer {
+    max-width: 180px !important;
+  }
+  .rightSidebar, .blogSidebar {
+    max-width: 160px !important;
+  }
+}
 
 @import "modules/notes.css";
 
